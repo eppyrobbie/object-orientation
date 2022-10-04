@@ -6,6 +6,10 @@
 
 //Code here
 
+let me = {
+  name : 'Robbie',
+  age : '25',
+}
 
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
@@ -17,6 +21,12 @@
 
 //Code here
 
+let dog = {
+  name: 'Rudy',
+  color: 'Red',
+  age: 2,
+  goodGirl: true
+}
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
@@ -24,13 +34,14 @@
 
 //Code here
 
-
+//console.log(dog.name)
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
 
+//console.log(dog['color'])
 
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
@@ -41,12 +52,23 @@
 
 //Code here
 
+let favoriteThings = {
+  band: 'The 1975',
+  food: 'pork belly',
+  person: 'Hailey',
+  book: 'The Name of the Wind',
+  movie: 'Django: Unchained',
+  holiday: 'Thanksgiving',
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
 //Code here
+
+favoriteThings.car = 'Benz'
+favoriteThings.show = 'Breaking Bad'
 
 
 /*
@@ -56,6 +78,7 @@
 
 //Code here
 
+favoriteThings.food = 'Chicken nuggets'
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
@@ -74,7 +97,9 @@ var carDetails = {
 
 //Code Here
 
+let {color, make, model, year} = carDetails
 
+//console.log(color)
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
 
@@ -86,12 +111,12 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+   let {title, firstName, lastName} = obj
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
-
 
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
@@ -106,7 +131,19 @@ function greeting( obj ) {
 
 //Code Here
 
+let states = {
+  utah: 1,
+  california: 2,
+  texas: 3,
+  arizona: 4
+}
+function totalPopulation(states){
+  let {utah, california, texas, arizona} = states
+  return utah + california + texas + arizona
+}
 
+let stateSum = totalPopulation(states)
+//console.log(stateSum)
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -119,6 +156,22 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+let arr = []
+
+let diet = {
+  carb: 'carb',
+  fat: 'fat',
+  protein: 'fat'
+}
+
+function ingredients (diet) {
+  let {carb, fat, protein} = diet
+  arr.push(carb, fat, protein)
+  return arr
+  }
+
+//console.log(ingredients(diet))
 
 
 
@@ -142,6 +195,11 @@ var user = {
 
 //Code Here
 
+let {name, email} = user
+ name = 'Bryan G. Smith'
+ email = 'bryan.smith@devmountain'
+
+//console.log(user)
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -150,6 +208,9 @@ var user = {
 
 //Code Here
 
+delete user.age
+
+//console.log(user)
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -160,7 +221,17 @@ var user = {
 
 //Code here
 
+class Cat {
+  constructor (name, age, color){
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
+}
 
+let cat1 = new Cat('Fluffy', 3, 'orange')
+
+//console.log(cat1.name)
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
@@ -171,6 +242,21 @@ var user = {
 */
 
 //Code here
+
+class Wizard {
+  constructor (name, age, favoriteSpell){
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+   castSpell(){
+    console.log(this.name'has cast' this.favoriteSpell)
+  }
+}
+
+let wizard1 = new Wizard ('Radagast', 1245, 'Bam')
+
+
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
